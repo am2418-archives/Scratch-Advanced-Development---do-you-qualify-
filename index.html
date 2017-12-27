@@ -30,10 +30,11 @@ color: red;
 <p>Do you qualify for <a href="https://scratch.mit.edu/studios/4525446/projects/">S.A.D.</a>?</p>
 <p class="txtbox" contenteditable="true">Enter your username here.</p>
 <script>
+  var win;
 function goToSS() {
 var username = document.getElementsByTagName("p")[1].innerHTML;
-var win = open("http://scratchstats.cf/#"+username);
-win.document.getElementsByTagName("body")[0].innerHTML="<h1>Requirements for S.A.D: Scratcher, 250 loves, 100 faves, 10 shared projects</h1>"+win.document.getElementsByTagName("body")[0].innerHTML;
+win = open("http://scratchstats.cf/#"+username);
+setTimeout(function(){win.document.getElementsByTagName("body")[0].innerHTML="<h1>Requirements for S.A.D: Scratcher, 250 loves, 100 faves, 10 shared projects</h1>"+win.document.getElementsByTagName("body")[0].innerHTML;},1000);
 }
 </script>
 <button onclick="goToSS();">Go to ScratchStats</button>
