@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>S.A.D - Do you qualify?</title>
+<style>
+body {
+background-color: orange;
+}
+p {
+color: red;
+}
+.txtbox {
+background-color: red;
+color: orange;
+}
+button {
+background-color: red;
+border-color: red;
+color: orange;
+border-radius: 8px;
+transition-duration: 0.4s;
+}
+button:hover {
+background-color: orange;
+color: red;
+}
+</style>
+</head>
+<body>
+<p>Do you qualify for <a href="https://scratch.mit.edu/studios/4525446/projects/">S.A.D.</a>?</p>
+<p class="txtbox" contenteditable="true">Enter your username here.</p>
+<script>
+function goToSS() {
+var username = document.getElementsByTagName("p")[1].innerHTML;
+var win = open("http://scratchstats.cf/#"+username);
+win.document.getElementsByTagName("body")[0].innerHTML="<h1>Requirements for S.A.D: Scratcher, 250 loves, 100 faves, 10 shared projects</h1>"+win.document.getElementsByTagName("body")[0].innerHTML;
+}
+</script>
+<button>Go to ScratchStats</button>
+</body>
+</html>
